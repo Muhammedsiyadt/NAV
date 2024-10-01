@@ -1,0 +1,145 @@
+
+.navbar{
+    width: 100%;
+    color: rgb(255, 255, 255);
+    border-bottom: 0.5px solid #ff990052;
+    justify-content: space-between;
+}
+
+.navLogo {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #ff6a00;
+    text-align: center;
+    cursor: pointer;
+}
+
+.navLogo h3 {
+    display: flex;
+    align-items: flex-end;
+}
+
+.big {
+    font-size: 40px;
+    color: #ff6a00;
+    transform: translateY(2px);
+    text-shadow: 0px 0px 5px rgb(255, 255, 255) 
+}
+
+.small {
+    font-size: 30px;
+    text-shadow: 0px 0px 5px rgb(255, 255, 255);
+}
+
+
+.center{
+    text-align: center;
+}
+
+.ulTags{
+
+    list-style: none; 
+}
+.ulTags li {
+    padding: 10px 20px;
+    background: transparent;
+    color: #ff8000;
+    cursor: pointer;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+    position: relative;
+}
+
+.ulTags li:hover {
+    transform: scale(1.1);
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+
+}
+
+.ulTags li::after {
+    content: '';
+    position: absolute;
+    left: 50%; 
+    bottom: -5px;
+    width: 50%;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    transform: translateX(-50%) scaleX(0); 
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+.ulTags li:hover::after {
+    transform: translateX(-50%) scaleX(1); 
+    transform-origin: bottom lef    t;
+}
+
+
+.right button {
+    padding: 5px 10px;
+    border: 1px solid white;
+    background-color: transparent;
+    color: #ff8000;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.right button:hover {
+    background-color: #c14000;
+    border: 1px solid rgb(255, 140, 0);
+    color: white;
+}
+
+
+.underNav{
+    color: rgb(0, 0, 0);
+    display: flex;
+    background-color: rgba(218, 199, 28, 0.356);
+    font-size: 10px;
+    border-bottom: 0.5px solid #ff990052;
+    justify-content: center; 
+    gap: 50px;
+}
+
+.underNav b:hover{
+    cursor: pointer
+}
+
+.images {
+    background-image: url(/Assets/fcb.jpg); /* Background image for the container */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+    color: white; 
+}
+
+h3 {
+    margin-bottom: 20px;
+}
+
+.imgdiv {
+    display: flex; /* Aligns child divs horizontally */
+    gap: 20px; /* Adds space between the image divs */
+}
+
+.imgdiv div {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.5); /* Adds a semi-transparent background to the divs */
+    border-radius: 10px; /* Makes the divs look rounded */
+    overflow: hidden; /* Ensures the images stay within the rounded divs */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgdiv img {
+    width: 100%; /* Ensures the image covers the width of the parent div */
+    height: auto; /* Maintains the aspect ratio */
+    object-fit: cover; /* Ensures the image covers the div without being distorted */
+}
